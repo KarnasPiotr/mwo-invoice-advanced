@@ -20,14 +20,17 @@ public abstract class Product {
 	}
 
 	public BigDecimal getPrice() {
-		return null;
+		return this.price;
 	}
 
 	public BigDecimal getTaxPercent() {
-		return null;
+		return this.taxPercent;
 	}
 
 	public BigDecimal getPriceWithTax() {
-		return null;
+		
+		BigDecimal k = new BigDecimal(1);
+				
+		return this.price.multiply(this.taxPercent.add(k));
 	}
 }
